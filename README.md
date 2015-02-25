@@ -15,24 +15,24 @@ Slug Generator Plugin for CakePHP 2.x
 
 4) When you want to use the plugin, just set the following in your model file:
 
-```
-	public $actsAs = array(
-		'Slugable.Slugable' => array('your_title_field' => 'your_slug_field')
-	);
-```
-
-    For example, if your display field was "title" and your slug field as "slug"
-
-```
-	public $actsAs = array(
-		'Slugable.Slugable' => array('title' => 'slug')
-	);
+```php
+public $actsAs = array(
+	'Slugable.Slugable' => array('your_title_field' => 'your_slug_field')
+);
 ```
 
-	Finally, in the spirit of simplification, if the title field is your $this->displayField, you can pass the $actsAs like follows:
+For example, if your display field was "title" and your slug field as "slug"
 
-	```
-	public $actsAs = array(
-		'Slugable.Slugable' => 'slug'
-	);
+```php
+public $actsAs = array(
+	'Slugable.Slugable' => array('title' => 'slug')
+);
+```
+
+Finally, in the spirit of simplification, if the title field is your $this->displayField, you can pass the $actsAs like follows:
+
+```php
+public $actsAs = array(
+	'Slugable.Slugable' => 'slug'
+);
 ```
